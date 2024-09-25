@@ -1,0 +1,40 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter the sustained wind speed (in miles per hour):");
+        if (double.TryParse(Console.ReadLine(), out double windSpeed))
+        {
+            if (windSpeed < 74)
+            {
+                Console.WriteLine("This is not a hurricane.");
+            }
+            else if (windSpeed >= 157)
+            {
+                Console.WriteLine("Category 5 hurricane.");
+            }
+            else if (windSpeed >= 130)
+            {
+                Console.WriteLine("Category 4 hurricane.");
+            }
+            else if (windSpeed >= 111)
+            {
+                Console.WriteLine("Category 3 hurricane.");
+            }
+            else if (windSpeed >= 96)
+            {
+                Console.WriteLine("Category 2 hurricane.");
+            }
+            else if (windSpeed >= 74)
+            {
+                Console.WriteLine("Category 1 hurricane.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number.");
+        }
+    }
+}
